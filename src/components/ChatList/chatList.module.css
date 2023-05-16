@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  gap: .5rem;
+}
+
+.wrapper:hover {
+  cursor: pointer;
+  background-color: var(--chat-color-hover);
+}
+
+.wrapper img {
+  margin: .25rem;
+}
+
+.chatItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chatItem p {
+  font-size: 13px;
+}

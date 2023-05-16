@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 3.8rem;
+  border-bottom: 1px solid var(--background-grey);
+}
+
+.wrapper input {
+  height: 2.5rem;
+  margin: .5rem 1rem;
+  padding: 0 .5rem;
+  border-radius: .5rem;
+  border-style: none;
+  background-color: var(--chat-color-secondary);
+  /* width: 100%; */
+}
+
+.wrapper input::placeholder {
+  padding-left: .5rem;
+}
