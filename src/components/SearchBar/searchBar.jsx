@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
-import { nanoid} from 'nanoid'
+import { nanoid } from 'nanoid'
 import s from './searchBar.module.css'
 
 export const SearchBar = ({ phoneNumber, setPhoneNumber }) => {
@@ -12,7 +12,7 @@ export const SearchBar = ({ phoneNumber, setPhoneNumber }) => {
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
-      setPhoneNumber([...phoneNumber, {input, id: nanoid()}])
+      setPhoneNumber([...phoneNumber, { input, id: nanoid() }])
       e.target.value = ''
       // console.log(input)
     }

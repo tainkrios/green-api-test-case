@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useRef } from 'react'
 import s from './login.module.css'
 
