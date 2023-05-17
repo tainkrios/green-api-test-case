@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  gap: .5rem;
+  width: 100%;
+  background-color: var(--chat-color-secondary);
+  border-bottom: 1px solid var(--background-grey);
+}
+
+.wrapper img {
+  margin: 0.37rem 1rem;
+}
+
+.chatTitle {
+  display: flex;
+  align-items: center;
+}

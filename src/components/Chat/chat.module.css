@@ -1,3 +1,18 @@
 .wrapper {
   width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgWrap img {
+  width: 100%;
+  padding: 5rem;
+}
+
+.wrapperChat {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

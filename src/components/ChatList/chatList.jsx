@@ -1,8 +1,8 @@
-import Avatar from './assets/account.svg'
+import { Avatar } from '../avatar/avatar'
 import s from './chatList.module.css'
 
 /* eslint-disable react/prop-types */
-export const ChatList = ({ phoneNumber }) => {
+export const ChatList = ({ phoneNumber, setIsChatActive }) => {
   return (
     <>
       {Array.isArray(phoneNumber)
@@ -10,11 +10,9 @@ export const ChatList = ({ phoneNumber }) => {
             <div
               className={s.wrapper}
               key={number.id}
+              onClick={() => setIsChatActive(number)}
             >
-              <img
-                src={Avatar}
-                alt='avatar'
-              />
+              <Avatar />
               <div className={s.chatItem}>
                 <h4>+{number.input}</h4>
                 <p>last message</p>
