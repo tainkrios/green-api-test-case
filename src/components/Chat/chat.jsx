@@ -7,7 +7,10 @@ import { ChatHeader } from './ui/chatHeader/chatHeader'
 import { ChatInput } from './ui/chatInput/chatInput'
 
 export const Chat = ({ isChatActive }) => {
-  const [messages, setmessages] = useState([])
+  const [messages, setMessages] = useState([])
+
+  // console.log(messages);
+
   return (
     <>
       {isChatActive ? (
@@ -15,12 +18,13 @@ export const Chat = ({ isChatActive }) => {
           <ChatHeader isChatActive={isChatActive} />
           <ChatBody
             messages={messages}
-            setmessages={setmessages}
+            setMessages={setMessages}
+            sender={isChatActive}
           />
           <ChatInput
             isChatActive={isChatActive}
-            messages={messages}
-            setmessages={setmessages}
+            // messages={messages}
+            // setMessages={setMessages}
           />
         </div>
       ) : (

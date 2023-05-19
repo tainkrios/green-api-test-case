@@ -15,8 +15,6 @@ export const Login = ({ setLogin }) => {
     localStorage.setItem('idInstance', idInstance)
     localStorage.setItem('apiToken', apiToken)
 
-    console.log(idInstance)
-
     idInstanceRef.current.value = ''
     apiTokenRef.current.value = ''
     setLogin(true)

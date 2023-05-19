@@ -6,7 +6,6 @@ import s from './sidebar.module.css'
 
 export const Sidebar = ({ setIsChatActive }) => {
   const [phoneNumber, setPhoneNumber] = useState([])
-  // console.log(phoneNumber)
   return (
     <aside className={s.wrapper}>
       <SearchBar

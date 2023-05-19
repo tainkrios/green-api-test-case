@@ -2,10 +2,10 @@
 import s from './chatInput.module.css'
 import { SendButton } from './../../../sendButton/sendButton'
 import { useDeferredValue, useState } from 'react'
-import { apiFetcher } from '../../../../shared/api/api'
+import { sendMessage } from '../../../../shared/api/api'
 
-export const ChatInput = ({ isChatActive, messages, setMessages }) => {
-  const [input, setInput] = useState('')
+export const ChatInput = ({ isChatActive }) => {
+  const [input, setInput] = useState()
 
   const handleChange = (e) => {
     setInput(e.target.value)
@@ -15,12 +15,12 @@ export const ChatInput = ({ isChatActive, messages, setMessages }) => {
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
-      apiFetcher({
+      sendMessage({
         chatId: `${isChatActive.input}@c.us`,
         message: deferredInput,
       })
-      
-      setMessages([...messages, deferredInput])
+
+      // setMessages([...messages, { text: deferredInput, isMe: true }])
 
       e.target.value = ''
     }
