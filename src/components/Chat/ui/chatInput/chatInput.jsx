@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import s from './chatInput.module.css'
-import { SendButton } from './../../../sendButton/sendButton'
+import { SendButton } from 'src/components/sendButton'
 import { useDeferredValue, useRef, useState } from 'react'
-import { sendMessage } from '../../../../shared/api/api'
+import { sendMessage } from 'src/shared/api'
 
 export const ChatInput = ({ isChatActive }) => {
   const [input, setInput] = useState()

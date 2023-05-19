@@ -2,9 +2,9 @@
 import { useState } from 'react'
 import Logo from './assets/logo.png'
 import s from './chat.module.css'
-import { ChatBody } from './ui/chatBody/chatBody'
-import { ChatHeader } from './ui/chatHeader/chatHeader'
-import { ChatInput } from './ui/chatInput/chatInput'
+import { ChatBody } from 'src/components/Chat/'
+import { ChatHeader } from 'src/components/Chat'
+import { ChatInput } from 'src/components/Chat'
 
 export const Chat = ({ isChatActive }) => {
   const [messages, setMessages] = useState([])

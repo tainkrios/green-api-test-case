@@ -1,4 +1,4 @@
-import { Avatar } from '../avatar/avatar'
+import { Avatar } from 'src/components/avatar'
 import s from './chatList.module.css'
 
 /* eslint-disable react/prop-types */

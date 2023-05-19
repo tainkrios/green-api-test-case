@@ -1,8 +1,11 @@
 import { useState } from 'react'
-import { BaseLayout } from './components/layout/baseLayout/BaseLayout.jsx'
-import { MainScreen } from './components/mainScreen/mainScreen.jsx'
-import { Login } from './components/login/login.jsx'
+// import { BaseLayout } from 'components/layout/baseLayout'
+// import { MainScreen } from 'components/mainScreen'
+// import { Login } from 'components/login'
 import './App.css'
+import { BaseLayout } from 'src/components/layout'
+import { Login } from './components/login'
+import { MainScreen } from './components/mainScreen'
 
 export const App = () => {
   const [login, setLogin] = useState(false)

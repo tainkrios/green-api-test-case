@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { Chat } from "../Chat/chat"
-import { Sidebar } from "../sidebar/sidebar"
+import { Sidebar } from "src/components/sidebar"
+import { Chat } from "src/components/Chat"
 import s from './mainScreen.module.css'
 
 export const MainScreen = () => {

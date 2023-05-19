@@ -2,7 +2,7 @@
 import { useRef, useState } from 'react'
 import { nanoid } from 'nanoid'
 import s from './searchBar.module.css'
-import { SendButton } from '../sendButton/sendButton'
+import { SendButton } from 'src/components/sendButton'
 
 export const SearchBar = ({ phoneNumber, setPhoneNumber }) => {
   const [input, setInput] = useState()
