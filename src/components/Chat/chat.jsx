@@ -9,8 +9,6 @@ import { ChatInput } from './ui/chatInput/chatInput'
 export const Chat = ({ isChatActive }) => {
   const [messages, setMessages] = useState([])
 
-  // console.log(messages);
-
   return (
     <>
       {isChatActive ? (
@@ -23,8 +21,6 @@ export const Chat = ({ isChatActive }) => {
           />
           <ChatInput
             isChatActive={isChatActive}
-            // messages={messages}
-            // setMessages={setMessages}
           />
         </div>
       ) : (

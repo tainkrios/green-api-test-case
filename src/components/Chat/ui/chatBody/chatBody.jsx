@@ -1,10 +1,20 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { deleteNotification, receiveMessage } from '../../../../shared/api/api'
 import s from './chatBody.module.css'
 
 /* eslint-disable react/prop-types */
 export const ChatBody = ({ messages, setMessages, sender }) => {
   const [receipt, setReceipt] = useState()
+  const messagesEndRef = useRef(null)
+
+  const scrollToBottom = () => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+      })
+    }
+  }
 
   const getNotification = async () => {
     try {
@@ -26,6 +36,7 @@ export const ChatBody = ({ messages, setMessages, sender }) => {
     const int = setInterval(() => {
       if (sender.id) getNotification()
     }, 5000)
+
     return () => clearInterval(int)
   }, [sender.id])
 
@@ -49,8 +60,17 @@ export const ChatBody = ({ messages, setMessages, sender }) => {
       const newMessage = {
         text,
         sender: receipt.body.senderData.sender === `${sender.input}@c.us`,
+        id: receipt.body.idMessage,
       }
-      setMessages(() => [...messages, newMessage])
+      const isIdExists = messages.some(
+        (message) => message.id === newMessage.id,
+      )
+
+      if (!isIdExists) {
+        setMessages((prevMessages) => [...prevMessages, newMessage])
+        scrollToBottom()
+      }
+
       deleteNotification(receipt.receiptId)
     }
   }, [receipt?.receiptId])
@@ -68,6 +88,7 @@ export const ChatBody = ({ messages, setMessages, sender }) => {
               </div>
             ))
           : null}
+        <div ref={messagesEndRef} />
       </div>
     </div>
   )
