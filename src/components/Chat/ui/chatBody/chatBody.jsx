@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
-import { deleteNotification, receiveMessage } from 'src/shared/api'
+import { deleteNotification, receiveMessage } from 'src/shared/api/api'
 import s from './chatBody.module.css'
 
 /* eslint-disable react/prop-types */

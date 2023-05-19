@@ -2,7 +2,7 @@
 import s from './chatInput.module.css'
 import { SendButton } from 'src/components/sendButton'
 import { useDeferredValue, useRef, useState } from 'react'
-import { sendMessage } from 'src/shared/api'
+import { sendMessage } from 'src/shared/api/api'
 
 export const ChatInput = ({ isChatActive }) => {
   const [input, setInput] = useState()
